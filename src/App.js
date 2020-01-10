@@ -56,6 +56,8 @@ class App extends Component{
           <div className="button-background">
           <button onClick={this.incrementRow}> Add row </button>
           <button onClick={this.incrementColumn}> Add column </button>
+          <button onClick={this.decrementRow}> Remove row </button>
+          <button onClick={this.decrementColumn}> Remove column </button>
           <select onChange={this.updateColor}>
             <option value="white"> White </option>
             <option value="black"> Black </option>
@@ -65,15 +67,15 @@ class App extends Component{
           </select>
 
           <div>
-            row count: {this.state.rowCount}
+            Row count: {this.state.rowCount}
           </div>
 
           <div>
-            column count: {this.state.columnCount}
+            Column count: {this.state.columnCount}
           </div>
 
           <div>
-            color: { this.state.color}
+            Selected color: { this.state.color}
           </div>
 
 
@@ -83,11 +85,6 @@ class App extends Component{
             Testable button
              <AddRow rowCount={this.state.rowCount} columnCount={this.state.columnCount} color={this.state.color}></AddRow>
           */}
-
-
-
-
-
 
           <Table rows={this.state.rowCount} columns={this.state.columnCount} color={this.state.color} />
 
