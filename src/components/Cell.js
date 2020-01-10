@@ -6,7 +6,7 @@ class Cell extends Component{
     super(props);
 
     this.state = {
-      color: 'blue'
+      color: 'gray'
     };
   }
 
@@ -27,7 +27,7 @@ class Cell extends Component{
   render(){
     const color = this.props.color
       return(
-        <td class={this.props.color} onClick={this.handleClick} onMouseOver={this.handleMouseOver}/>
+        <td class={this.state.color} onClick={this.handleClick} onMouseOver={this.handleMouseOver}/>
       );
   }
 }

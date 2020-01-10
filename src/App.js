@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import './App.css';
-import AddRow from './components/row'
-import Table from './components/Table'
+//import AddRow from './components/row'
+import Table from './components/Table';
+
+
 class App extends Component{
   constructor(props){
     super(props);
@@ -57,8 +59,6 @@ class App extends Component{
              <AddRow rowCount={this.state.rowCount} columnCount={this.state.columnCount} color={this.state.color}></AddRow>
           */}
 
-          <AddRow rowCount={this.state.rowCount} columnCount={this.state.columnCount} color={this.state.color}></AddRow>
-         
           <div>
           <button onClick={this.incrementRow}> Add row </button>
           <button onClick={this.incrementColumn}> Add column </button>
@@ -83,7 +83,9 @@ class App extends Component{
           color: { this.state.color}
           </div>
 
-        <Table rows={this.state.rowCount} coluns={this.state.columnCount} color={this.state.color}>
+          <Table rows={this.state.rowCount} columns={this.state.columnCount} color={this.state.color} />
+
+        </header>
       </div>
     );
   }

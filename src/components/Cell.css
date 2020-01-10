@@ -4,6 +4,18 @@ td{
   background-color: gray;
 }
 
+.white{
+    background-color:white;
+}
+
+.black{
+  background-color:black;
+}
+
+.yellow{
+  background-color: yellow;
+}
+
 .red{
   background-color: red
 }
