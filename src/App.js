@@ -50,6 +50,13 @@ class App extends Component{
     }
   }
 
+  onMouseDown = (event) => {
+    this.setState({
+      isMouseDown: true,
+    })
+    console.log('mousedown triggered')
+  }
+
   render(){
     return (
       <div className="App">
@@ -86,7 +93,8 @@ class App extends Component{
              <AddRow rowCount={this.state.rowCount} columnCount={this.state.columnCount} color={this.state.color}></AddRow>
           */}
 
-          <Table rows={this.state.rowCount} columns={this.state.columnCount} color={this.state.color} />
+          <button onClick={this.onMouseDown}> Draw </button>
+          <Table rows={this.state.rowCount} columns={this.state.columnCount} color={this.state.color} drawing={this.state.isMouseDown} onMouseDown={this.onMouseDown}/>
 
         </header>
       </div>

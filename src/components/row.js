@@ -8,8 +8,8 @@ class AddRow extends Component{
     }
     render(){
       var cells = [];
-      for (var i = 0; i < this.props.rows; i++){
-        cells.push(<Cell color={this.props.color}/>);
+      for (var i = 0; i < this.props.columns; i++){
+        cells.push(<Cell color={this.props.color} drawing={this.props.drawing}/>);
       }
       return(
         <tr> {cells} </tr>

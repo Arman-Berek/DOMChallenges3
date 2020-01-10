@@ -10,8 +10,8 @@ class Table extends Component {
 
   render(){
     var rows = [];
-    for (var i = 0; i < this.props.columns; i++){
-      rows.push(<Row rows={this.props.rows} color={this.props.color}/>);
+    for (var i = 0; i < this.props.rows; i++){
+      rows.push(<Row columns={this.props.columns} color={this.props.color} drawing={this.props.drawing}/>);
     }
     return(
       <div>
