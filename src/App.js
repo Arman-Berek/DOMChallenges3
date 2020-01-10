@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
+import AddRow from './components/row'
+
 
 class App extends Component{
   constructor(props){
@@ -7,7 +9,8 @@ class App extends Component{
     this.state = {
       rowCount: 0,
       columnCount: 0,
-      color: ""
+      color: "",
+      isMouseDown: false
     }
   }
   
@@ -44,6 +47,8 @@ class App extends Component{
       })
     }
   }
+
+
   
   render(){
     return (
@@ -52,6 +57,9 @@ class App extends Component{
           {/*
             Testable button
           */}
+
+          <AddRow rowCount={this.state.rowCount} columnCount={this.state.columnCount} color={this.state.color}></AddRow>
+
           <button onClick={this.incrementRow}> Add row </button>
           row count: {this.state.rowCount}
 
