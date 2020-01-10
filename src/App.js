@@ -8,8 +8,8 @@ class App extends Component{
   constructor(props){
     super(props);
     this.state = {
-      rowCount: 0,
-      columnCount: 0,
+      rowCount: 1,
+      columnCount: 1,
       color: "white",
       isMouseDown: false
     }
