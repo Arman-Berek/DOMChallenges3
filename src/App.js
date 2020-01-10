@@ -14,15 +14,10 @@ class App extends Component{
     }
   }
 
-<<<<<<< HEAD
-  updateColor = (newColor) => {
-    this.setState = ({
-      color: newColor
-=======
+
   updateColor = (event) => {
     this.setState({
       color: event.target.value
->>>>>>> Added selectable color
     })
   }
 
@@ -54,11 +49,6 @@ class App extends Component{
     }
   }
 
-<<<<<<< HEAD
-=======
-
-  
->>>>>>> Table row added
   render(){
     return (
       <div className="App">
