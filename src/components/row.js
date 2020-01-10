@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-
+import "./Cell.js"
 
 class AddRow extends Component{
     constructor(props){
