@@ -7,8 +7,9 @@ class Cell extends Component{
   }
 
   render(){
+    const color = this.props.color
       return(
-        <td class={this.props.color} onClick={this.props.handleClick} onMouseOver={this.handleMouseOver}/>
+        <td class={color} onClick={this.props.handleClick} onMouseOver={this.handleMouseOver}/>
       );
   }
 }

@@ -8,7 +8,7 @@ class App extends Component{
     this.state = {
       rowCount: 0,
       columnCount: 0,
-      color: ""
+      color: "red"
     }
   }
   
