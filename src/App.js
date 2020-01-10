@@ -11,7 +11,7 @@ class App extends Component{
       rowCount: 1,
       columnCount: 1,
       color: "white",
-      isMouseDown: false
+      drawing: false
     }
   }
 
@@ -50,9 +50,10 @@ class App extends Component{
     }
   }
 
-  onMouseDown = (event) => {
+  handleClick = (event) => {
+    let newDrawing = !this.state.drawing;
     this.setState({
-      isMouseDown: true,
+      drawing: newDrawing,
     })
     console.log('mousedown triggered')
   }
@@ -95,8 +96,8 @@ class App extends Component{
              <AddRow rowCount={this.state.rowCount} columnCount={this.state.columnCount} color={this.state.color}></AddRow>
           */}
 
-          <button onClick={this.onMouseDown}> Draw </button>
-          <Table rows={this.state.rowCount} columns={this.state.columnCount} color={this.state.color} drawing={this.state.isMouseDown} onMouseDown={this.onMouseDown}/>
+          <button onClick={this.handleClick}> Draw </button>
+          <Table rows={this.state.rowCount} columns={this.state.columnCount} color={this.state.color} drawing={this.state.drawing}/>
 
         </header>
         </div>
