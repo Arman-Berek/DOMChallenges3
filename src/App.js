@@ -13,7 +13,7 @@ class App extends Component{
 
   updateColor = (newColor) => {
     this.setState = ({
-      color: this.state.color
+      color: newColor
     })
   }
 
