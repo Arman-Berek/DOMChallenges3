@@ -64,8 +64,6 @@ class App extends Component{
           <div className="button-background">
           <button class="inputs" onClick={this.incrementRow}> Add row </button>
           <button class="inputs" onClick={this.incrementColumn}> Add column </button>
-          <button class="inputs" onClick={this.incrementRow}> Add row </button>
-          <button class="inputs" onClick={this.incrementColumn}> Add column </button>
           <button class="inputs" onClick={this.decrementRow}> Remove row </button>
           <button class="inputs" onClick={this.decrementColumn}> Remove column </button>
           <select class="inputs" onChange={this.updateColor}>
