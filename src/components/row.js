@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import "./Cell.js"
+import Cell from "./Cell.js";
 
 class AddRow extends Component{
     constructor(props){
@@ -8,13 +8,15 @@ class AddRow extends Component{
     }
     
     render(){
-        
+        for(let i = 0; i < this.props.rowCount;i++){
+                for(let x = 0; x < this.props.columnCount; x++){
+                <Cell color="this.props.color"/>
+            }
+        }
         return(
             <table>
            <tr>
-            for(let i = 0; i < this.props.rowCount){
-                  
-            }
+            {}
             </tr>
             </table>
         )
