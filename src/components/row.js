@@ -4,21 +4,16 @@ import Cell from "./Cell.js";
 class AddRow extends Component{
     constructor(props){
         super(props);
-        
+
     }
-    
     render(){
-        let rows = [];
-        for(let i = 0; i < this.props.rowCount;i++){
-            rows.push(<Cell color="this.props.color"/>)
-        }
-        return(
-            <table>
-           <tr>
-            {rows}
-            </tr>
-            </table>
-        )
+      var cells = [];
+      for (var i = 0; i < this.props.rows; i++){
+        cells.push(<Cell color={this.props.color}/>);
+      }
+      return(
+        <tr> {cells} </tr>
+      );
     }
 }
 export default AddRow;

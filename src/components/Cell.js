@@ -4,12 +4,30 @@ import './Cell.css'
 class Cell extends Component{
   constructor(props){
     super(props);
+
+    this.state = {
+      color: 'blue'
+    };
+  }
+
+  handleClick = () => {
+    this.setState({
+      color: this.props.color
+    });
+  }
+
+  handleMouseOver = () => {
+    if (this.props.drawing) {
+      this.setState({
+        color: this.props.color
+      })
+    }
   }
 
   render(){
     const color = this.props.color
       return(
-        <td class={color} onClick={this.props.handleClick} onMouseOver={this.handleMouseOver}/>
+        <td class={this.props.color} onClick={this.handleClick} onMouseOver={this.handleMouseOver}/>
       );
   }
 }
