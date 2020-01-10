@@ -10,7 +10,7 @@ class App extends Component{
       color: ""
     }
   }
-  
+
   updateColor = (newColor) => {
     this.setState = ({
       color: this.state.color
@@ -44,7 +44,7 @@ class App extends Component{
       })
     }
   }
-  
+
   render(){
     return (
       <div className="App">
