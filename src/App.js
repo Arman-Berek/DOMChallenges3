@@ -96,7 +96,7 @@ class App extends Component{
              <AddRow rowCount={this.state.rowCount} columnCount={this.state.columnCount} color={this.state.color}></AddRow>
           */}
 
-          <button onClick={this.handleClick}> Draw </button>
+          <button class="inputs" onClick={this.handleClick}> Draw </button>
           <Table rows={this.state.rowCount} columns={this.state.columnCount} color={this.state.color} drawing={this.state.drawing}/>
 
         </header>
