@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 //import AddRow from './components/row'
+import Table from './components/Table';
 
 
 class App extends Component{
@@ -58,7 +59,7 @@ class App extends Component{
              <AddRow rowCount={this.state.rowCount} columnCount={this.state.columnCount} color={this.state.color}></AddRow>
           */}
 
-         
+
           <div>
           <button onClick={this.incrementRow}> Add row </button>
           <button onClick={this.incrementColumn}> Add column </button>
@@ -82,6 +83,8 @@ class App extends Component{
           <div>
           color: { this.state.color}
           </div>
+
+          <Table rows={this.state.rowCount} columns={this.state.columnCount} color={this.state.color} />
 
         </header>
       </div>
