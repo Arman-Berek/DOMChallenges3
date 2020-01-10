@@ -6,15 +6,18 @@ class AddRow extends Component{
         super(props);
         
     }
-    handleAddRow = () => {
-        
-    }
+    
     render(){
+        
         return(
-            <div>
-                <button type="submit" onClick={this.handleAddRow}>Add Row</button>
-                <button type="submit" onClick={this.handleAddColumn}>Add Column</button>
-            </div>
+            <table>
+           <tr>
+            for(let i = 0; i < this.props.rowCount){
+                  
+            }
+            </tr>
+            </table>
         )
     }
 }
+export default AddRow;
