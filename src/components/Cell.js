@@ -21,6 +21,7 @@ class Cell extends Component{
       this.setState({
         color: this.props.color
       })
+      console.log('mouseovered');
     }
   }
 
