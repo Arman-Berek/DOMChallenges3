@@ -8,8 +8,8 @@ class App extends Component{
   constructor(props){
     super(props);
     this.state = {
-      rowCount: 0,
-      columnCount: 0,
+      rowCount: 1,
+      columnCount: 1,
       color: "white",
       isMouseDown: false
     }
@@ -53,35 +53,41 @@ class App extends Component{
   render(){
     return (
       <div className="App">
-        <header className="App-header">
-          {/*
-            Testable button
-             <AddRow rowCount={this.state.rowCount} columnCount={this.state.columnCount} color={this.state.color}></AddRow>
-          */}
-
-          <div>
-          <button onClick={this.incrementRow}> Add row </button>
-          <button onClick={this.incrementColumn}> Add column </button>
-          <select onChange={this.updateColor}>
+          <div className="button-background">
+          <button class="inputs" onClick={this.incrementRow}> Add row </button>
+          <button class="inputs" onClick={this.incrementColumn}> Add column </button>
+          <select class="inputs" onChange={this.updateColor}>
             <option value="white"> White </option>
             <option value="black"> Black </option>
             <option value="blue"> Blue </option>
             <option value="red"> Red </option>
             <option value="yellow"> Yellow </option>
           </select>
+
+          <div>
+            row count: {this.state.rowCount}
           </div>
 
           <div>
-          row count: {this.state.rowCount}
+            column count: {this.state.columnCount}
           </div>
 
           <div>
-          column count: {this.state.columnCount}
+            color: { this.state.color}
           </div>
 
-          <div>
-          color: { this.state.color}
+
           </div>
+        <header className="App-header">
+          {/*
+            Testable button
+             <AddRow rowCount={this.state.rowCount} columnCount={this.state.columnCount} color={this.state.color}></AddRow>
+          */}
+
+
+
+
+
 
           <Table rows={this.state.rowCount} columns={this.state.columnCount} color={this.state.color} />
 
