@@ -62,18 +62,20 @@ class App extends Component{
     return (
       <div className="App">
           <div className="button-background">
-          <button onClick={this.incrementRow}> Add row </button>
-          <button onClick={this.incrementColumn}> Add column </button>
-          <button onClick={this.decrementRow}> Remove row </button>
-          <button onClick={this.decrementColumn}> Remove column </button>
-          <select onChange={this.updateColor}>
+          <button class="inputs" onClick={this.incrementRow}> Add row </button>
+          <button class="inputs" onClick={this.incrementColumn}> Add column </button>
+          <button class="inputs" onClick={this.incrementRow}> Add row </button>
+          <button class="inputs" onClick={this.incrementColumn}> Add column </button>
+          <button class="inputs" onClick={this.decrementRow}> Remove row </button>
+          <button class="inputs" onClick={this.decrementColumn}> Remove column </button>
+          <select class="inputs" onChange={this.updateColor}>
             <option value="white"> White </option>
             <option value="black"> Black </option>
             <option value="blue"> Blue </option>
             <option value="red"> Red </option>
             <option value="yellow"> Yellow </option>
           </select>
-
+          
           <div>
             Row count: {this.state.rowCount}
           </div>
@@ -85,7 +87,7 @@ class App extends Component{
           <div>
             Selected color: { this.state.color}
           </div>
-
+          
 
           </div>
         <header className="App-header">
@@ -94,11 +96,11 @@ class App extends Component{
              <AddRow rowCount={this.state.rowCount} columnCount={this.state.columnCount} color={this.state.color}></AddRow>
           */}
 
-          <button onClick={this.handleClick}> Draw </button>
+          <button class="inputs" onClick={this.handleClick}> Draw </button>
           <Table rows={this.state.rowCount} columns={this.state.columnCount} color={this.state.color} drawing={this.state.drawing}/>
 
         </header>
-      </div>
+        </div>
     );
   }
 }

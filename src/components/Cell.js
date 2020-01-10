@@ -26,6 +26,7 @@ class Cell extends Component{
   }
 
   render(){
+    const color = this.props.color
       return(
         <td class={this.state.color} onClick={this.handleClick} onMouseOver={this.handleMouseOver}/>
       );
